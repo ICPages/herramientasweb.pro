@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<head>
+<meta charset="UTF-8">
+<title>Generador de Sopas de Letra | herramientasweb.pro</title>
+<meta name="description" content="Crea sopas de letras personalizadas para juegos, actividades educativas o entretenimiento. Generador online gratuito y fácil de usar.">
+<meta name="keywords" content="sopa de letras, generador sopa de letras, sopa de letras online, juegos educativos, herramientasweb, gratis">
+<meta name="author" content="herramientasweb.pro">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://herramientasweb.pro/sopa-letras.html">
+<!-- Icono del sitio -->
+<link rel="icon" href="Logo.webp">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="estrellas"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">herramientasweb.pro</a>
+        <div class="dropdown ms-auto">
+            <button class="btn btn-primary" type="button" id="shareDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-share-fill"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="shareDropdown">
+                <li>
+                    <a class="dropdown-item"
+                        href="https://api.whatsapp.com/send?text=¡Descubrí%20herramientas%20web%20increíbles,%20100%25%20seguras%20y%20totalmente%20gratis!%20🚀%20No%20te%20lo%20pierdas:%20https://herramientasweb.pro"
+                        target="_blank">
+                        <i class="bi bi-whatsapp" style="color:#25D366; font-size:1.2rem;"></i> WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=https://herramientasweb.pro"
+                        target="_blank">
+                        <i class="bi bi-facebook" style="color:#1877F2; font-size:1.2rem;"></i> Facebook
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item"
+                        href="https://twitter.com/intent/tweet?text=¡Descubrí%20herramientas%20web%20increíbles,%20100%25%20seguras%20y%20totalmente%20gratis!%20🚀%20No%20te%20lo%20pierdas:%20https://herramientasweb.pro"
+                        target="_blank">
+                        <i class="bi bi-twitter" style="color:#1DA1F2; font-size:1.2rem;"></i> Twitter
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://t.me/share/url?url=https://herramientasweb.pro&text=¡Descubrí%20herramientas%20web%20increíbles,%20100%25%20seguras%20y%20totalmente%20gratis!%20🚀%20No%20te%20lo%20pierdas" target="_blank">
+                        <i class="bi bi-telegram" style="color:#0088cc; font-size:1.2rem;"></i> Telegram
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="navigator.clipboard.writeText('https://herramientasweb.pro'); alert('Enlace copiado al portapapeles');">
+                        <i class="bi bi-link-45deg" style="font-size:1.2rem;"></i> Copiar Enlace
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <!-- CALIFICACIÓN -->
+            <div class="rating-box" data-tool="sopa-letras">
+                <div class="rating-stars">
+                    <span class="star" data-value="1">☆</span>
+                    <span class="star" data-value="2">☆</span>
+                    <span class="star" data-value="3">☆</span>
+                    <span class="star" data-value="4">☆</span>
+                    <span class="star" data-value="5">☆</span>
+                </div>
+                <p class="rating-text">Sin votos</p>
+            </div>
+            <!-- HERRAMIENTA -->
+            <div class="tool-card text-center">
+                <h1 class="mb-3">Generador de Sopas de Letra</h1>
+                <p>Crea sopas de letras personalizadas para juegos, actividades educativas o diversión.</p>
+                <div class="mb-3">
+                    <textarea id="palabrasInput" class="form-control mb-2"
+                        placeholder="Escribe tus palabras separadas por coma ','"></textarea>
+                    <label for="tamañoSopa" class="form-label mt-2">Tamaño de la sopa (número de filas y
+                        columnas)</label>
+                    <input type="number" id="tamañoSopa" class="form-control mb-2" value="10" min="5" max="30">
+                    <button class="btn btn-primary" onclick="generarSopa()">Generar</button>
+                    <button class="btn btn-secondary" onclick="reiniciarSopa()">Reiniciar</button>
+                </div>
+
+                <canvas id="sopaCanvas" width="400" height="400"></canvas>
+                <br>
+                <button class="btn btn-primary mt-t" onclick="descargarSopa()">Descargar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- INSTRUCCIONES -->
+<div class="container pb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="instrucciones">
+                <h2>¿Cómo usar el Generador de Sopas de Letra?</h2>
+                <p>Esta herramienta permite crear sopas de letras personalizadas de manera rápida y sencilla, ideal para juegos, material educativo o entretenimiento.</p>
+                <h5>Pasos para utilizar la herramienta:</h5>
+                <ol>
+                    <li>Escribe las palabras que deseas incluir en la sopa, separadas por coma <strong>','</strong>. Por ejemplo: "PERRO,GATO,AVIÓN".</li>
+                    <li>Selecciona el tamaño de la sopa (filas y columnas) para ajustar la dificultad.</li>
+                    <li>Presiona <strong>Generar Sopa de Letras</strong> para crear la sopa con tus palabras.</li>
+                    <li>El resultado aparecerá en el canvas y podrás imprimirlo o usarlo directamente.</li>
+                    <li>Si quieres empezar de nuevo, presiona <strong>Reiniciar</strong> para limpiar todo.</li>
+                </ol>
+                <h5>Para qué se usa cada opción:</h5>
+                <ul>
+                    <li><strong>Palabras:</strong> Define las palabras que aparecerán ocultas en la sopa de letras.</li>
+                    <li><strong>Tamaño de la sopa:</strong> Ajusta la cantidad de filas y columnas, afectando la complejidad y el espacio disponible para las palabras.</li>
+                    <li><strong>Generar Sopa de Letras:</strong> Crea la sopa con las palabras introducidas y distribuye las letras aleatoriamente.</li>
+                    <li><strong>Reiniciar:</strong> Limpia la sopa y permite crear una nueva desde cero.</li>
+                </ul>
+                <p>La sopa de letras funciona completamente online y no requiere instalación. Ideal para docentes, estudiantes, padres o cualquier persona que desee crear juegos de palabras personalizados.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center py-4">
+    <p>© 2026 <a class="footer-link" href="https://herramientasweb.pro/" target="_blank">herramientasweb.pro</a>. Herramientas y Sitio Desarrolladas por <a class="footer-link" href="https://ictecdigital.com/" target="_blank">IC Pages</a>.</p>
+    <p>
+        <a class="footer-link" href="aviso-privacidad.html">Aviso de Privacidad</a> | 
+        <a class="footer-link" href="politica-cookies.html">Política de Cookies</a> | 
+        <a class="footer-link" href="terminos-servicio.html">Términos de Servicio</a>
+    </p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+let sopa = [];
+let tamaño = 10;
+
+function generarSopa(){
+    const input = document.getElementById('palabrasInput').value.split(',').map(p=>p.trim()).filter(p=>p!=='');
+    tamaño = parseInt(document.getElementById('tamañoSopa').value) || 10;
+    if(input.length===0){
+        alert('Agrega al menos una palabra');
+        return;
+    }
+    sopa = Array.from({length:tamaño}, ()=>Array.from({length:tamaño}, ()=>String.fromCharCode(65+Math.floor(Math.random()*26))));
+    
+    // Colocar palabras aleatoriamente
+    input.forEach(palabra=>{
+        let colocada=false;
+        while(!colocada){
+            const dir = Math.floor(Math.random()*2); // 0 horizontal, 1 vertical
+            const fila = Math.floor(Math.random()*tamaño);
+            const col = Math.floor(Math.random()*tamaño);
+            if(dir===0 && col+palabra.length<=tamaño){
+                for(let i=0;i<palabra.length;i++) sopa[fila][col+i]=palabra[i].toUpperCase();
+                colocada=true;
+            } else if(dir===1 && fila+palabra.length<=tamaño){
+                for(let i=0;i<palabra.length;i++) sopa[fila+i][col]=palabra[i].toUpperCase();
+                colocada=true;
+            }
+        }
+    });
+    dibujarSopa();
+}
+
+function dibujarSopa(){
+    const canvas=document.getElementById('sopaCanvas');
+    const ctx=canvas.getContext('2d');
+    const tamañoCelda=canvas.width/tamaño;
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.font=`${tamañoCelda*0.7}px Poppins`;
+    ctx.textAlign='center';
+    ctx.textBaseline='middle';
+    for(let i=0;i<tamaño;i++){
+        for(let j=0;j<tamaño;j++){
+            ctx.fillStyle='#000';
+            ctx.fillText(sopa[i][j], j*tamañoCelda+tamañoCelda/2, i*tamañoCelda+tamañoCelda/2);
+            ctx.strokeStyle='#ccc';
+            ctx.strokeRect(j*tamañoCelda, i*tamañoCelda, tamañoCelda, tamañoCelda);
+        }
+    }
+}
+
+function reiniciarSopa(){
+    sopa=[];
+    document.getElementById('palabrasInput').value='';
+    const canvas=document.getElementById('sopaCanvas');
+    const ctx=canvas.getContext('2d');
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+
+function descargarSopa(){
+    const canvas = document.getElementById('sopaCanvas');
+    if(!sopa || sopa.length===0){
+        alert("Primero genera la sopa de letras para poder descargarla.");
+        return;
+    }
+    const enlace = document.createElement('a');
+    enlace.href = canvas.toDataURL('image/png');
+    enlace.download = 'sopa-herramientasweb.png';
+    enlace.click();
+}
+</script>
+
+<script type="module" src="rating.js"></script>
+
+<!-- BANNER DE COOKIES -->
+<div id="cookie-banner">
+    <p>Este sitio usa cookies para mejorar tu experiencia. 
+        <a href="aviso-privacidad.html" target="_blank">Más información</a>.
+    </p>
+    <button id="cookie-accept">Aceptar</button>
+</div>
+<script>
+document.getElementById('cookie-accept').addEventListener('click', function(){
+    document.getElementById('cookie-banner').style.display='none';
+    localStorage.setItem('cookiesAccepted','true');
+});
+window.addEventListener('load',function(){
+    if(localStorage.getItem('cookiesAccepted')==='true'){
+        document.getElementById('cookie-banner').style.display='none';
+    }
+});
+</script>
+
+</body>
+</html>

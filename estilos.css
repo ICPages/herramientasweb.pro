@@ -1,0 +1,262 @@
+:root {
+    --primary: #5933cf;
+    --secondary: #41e027;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+     padding-top: 50px;
+}
+
+/* ESTRELLAS */
+.estrellas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}
+
+.estrellas::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        100px 200px #41e027,
+        200px 300px #5933cf,
+        400px 500px white,
+        700px 100px #41e027,
+        900px 400px #5933cf,
+        1200px 600px white,
+        1500px 200px #41e027,
+        1800px 500px #5933cf,
+        250px 150px white,
+        350px 450px #41e027,
+        500px 250px #5933cf,
+        600px 350px white,
+        800px 550px #41e027,
+        1000px 150px #5933cf,
+        1300px 400px white,
+        1600px 300px #41e027,
+        50px 80px #5933cf,
+        120px 420px white,
+        220px 520px #41e027,
+        320px 120px #5933cf,
+        420px 220px white,
+        520px 420px #41e027,
+        620px 520px #5933cf,
+        720px 320px white,
+        820px 120px #41e027,
+        920px 520px #5933cf,
+        1020px 320px white,
+        1120px 220px #41e027,
+        1220px 120px #5933cf,
+        1420px 520px white,
+        1520px 420px #41e027,
+        1720px 320px #5933cf,
+        1820px 220px white;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #111;
+}
+
+.navbar::after{
+    content: "";
+    background: linear-gradient(90deg, #41e027, #5933cf);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    color: #41e027 !important;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: #0d0d0d;
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.sidebar .list-group-item {
+    background: #111;
+    color: #fff;
+    border: 1px solid #222;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar .list-group-item:hover {
+    background: #222;
+    color: var(--secondary);
+}
+
+/* BUSCADOR */
+.search-box {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* TARJETAS */
+.tool-card {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.nombre-herramienta {
+    color: #41e027;
+    font-weight: 700;
+}
+
+/* INSTRUCCIONES */
+.instrucciones {
+    color: #41e027;
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.instrucciones h2, h5 {
+    color: #5933cf;
+    font-weight: 700;
+}
+
+.instrucciones p, ol {
+    color: #41e027;
+}
+
+/* CALIFICACIONES */
+.rating-stars{
+  cursor: pointer;
+  font-size: 28px;
+  user-select: none;
+  padding: 3px;
+}
+
+.star{
+  margin:2px;
+  transition: 0.2s;
+  color: #fff;
+}
+
+.star.promedio{
+  color: #41e027;
+}
+
+.star.hovered{
+  color: #41e027;
+}
+
+.rating-text{
+  font-size:15px;
+  color:#ddd;
+}
+
+.rating-box {
+    text-align: right;
+    margin-top:-40px;
+}
+
+/* BOTON */
+.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    color: black;
+}
+
+/* FOOTER */
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #41e027;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#cookie-banner{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    animation: slideUp 0.5s ease-out;
+}
+
+#cookie-banner a{
+    color: #41e027;
+    text-decoration: underline;
+}
+
+#cookie-banner button{
+    background: #5933cf;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes slideUp{
+    from { transform: translate(-50%, 100px); opacity: 0; }
+    to { transform: translate(-50%, 0); opacity: 1; }
+}
+#sopaCanvas { border:2px solid #333; background:#fff; margin-top:20px; }
+#ruletaCanvas { border:2px solid #333; border-radius:50%; background:#fff; }
+#opcionesList { max-height: 200px; overflow-y: auto; margin-bottom:1rem; }
+#podium { margin-top:20px; }
+.podium-item { display:flex; justify-content:space-between; padding:5px 10px; border-bottom:1px solid #ccc; }
