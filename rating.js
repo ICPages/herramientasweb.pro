@@ -1,4 +1,4 @@
-// js/rating.js
+// FIREBASE - RAITING
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
 
@@ -82,3 +82,83 @@ const db = getFirestore(app);
   }
 
 })();
+
+
+// BANNER DE COOKIES
+document.getElementById('cookie-accept').addEventListener('click', function () {
+  document.getElementById('cookie-banner').style.display = 'none';
+  localStorage.setItem('cookiesAccepted', 'true');
+});
+window.addEventListener('load', function () {
+  if (localStorage.getItem('cookiesAccepted') === 'true') {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+});
+
+// BOTÓN DE COMPARTIR
+document.getElementById('shareBtn').addEventListener('click', () => {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Herramientas Web',
+            url: window.location.href
+        });
+    } else {
+        alert('Tu navegador no soporta compartir automáticamente');
+    }
+});
+
+// HERRAMIENTAS SUGERIDAS
+const herramientas = [
+    //{ nombre: "Calculadora Básica", link: "calculadora-basica.html" },
+    //{ nombre: "Área y Perímetro", link: "area-perimetro.html" },
+    //{ nombre: "Calculadora de Porcentajes", link: "calculadora-porcentajes.html" },
+    //{ nombre: "Calculadora de Promedios", link: "calculadora-promedios.html" }, //4
+    { nombre: "Convertidor a PDF", link: "convertidor-pdf.html" },
+    { nombre: "Convertidor a ZIP", link: "convertidor-zip.html" },
+    { nombre: "Código de Colores", link: "codigo-colores.html" },
+    { nombre: "Convertidor de Imágenes", link: "convertidor-imagenes.html" },
+    //{ nombre: "Convertidor de Números", link: "convertidor-numeros.html" },
+    //{ nombre: "Convertidor de Unidades", link: "convertidor-unidades.html" },
+    //{ nombre: "Contador de Texto", link: "contador-texto.html" },
+    { nombre: "Generador de Border-Radius", link: "border-radius.html" },
+    { nombre: "Generador de Box-Shadow", link: "box-shadow.html" },
+    //{ nombre: "Generador de Código de Barras", link: "codigo-barras.html" },
+    //{ nombre: "Generador de Password", link: "generador-password.html" },
+    { nombre: "Generador de Gradientes", link: "generador-gradientes.html" },
+    //{ nombre: "Generador de Meta Tag SEO", link: "meta-tag-seo.html" },
+    { nombre: "Generador QR", link: "generador-qr.html" },
+    { nombre: "Generador de Sopa de Letras", link: "sopa-letras.html" },
+    //{ nombre: "Tablas de Multiplicar", link: "tablas-multiplicar.html" },
+    //{ nombre: "Invertir Texto", link: "invertir-texto.html" },
+    //{ nombre: "Minificador de CSS", link: "minificador-css.html" },
+    //{ nombre: "Números Aleatorios", link: "numeros-aleatorios.html" },
+    { nombre: "Ruleta Personalizable", link: "ruleta-personalizable.html" }
+    //{ nombre: "Letra Aleatoria", link: "letra-aleatoria.html" }
+];
+
+// Detectar página actual
+const paginaActual = window.location.pathname.split("/").pop();
+
+// Filtrar para NO incluir la actual
+const herramientasFiltradas = herramientas.filter(h => h.link !== paginaActual);
+
+// Mezclar (mejor método Fisher-Yates)
+function mezclar(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Seleccionar 7
+const seleccionadas = mezclar([...herramientasFiltradas]).slice(0, 7);
+
+// Render
+const ul = document.getElementById("herramientasRandom");
+
+seleccionadas.forEach(h => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${h.link}">${h.nombre}</a>`;
+    ul.appendChild(li);
+});
