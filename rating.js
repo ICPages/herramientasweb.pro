@@ -151,8 +151,8 @@ function mezclar(array) {
     return array;
 }
 
-// Seleccionar 7
-const seleccionadas = mezclar([...herramientasFiltradas]).slice(0, 7);
+// Seleccionar 5
+const seleccionadas = mezclar([...herramientasFiltradas]).slice(0, 5);
 
 // Render
 const ul = document.getElementById("herramientasRandom");
