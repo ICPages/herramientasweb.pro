@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC1PSC0TC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JC1PSC0TC2');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4689120070476643" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>Generador de QR | Herramientas Web Gratis Online</title>
+    <meta name="description" content="Genera códigos QR personalizados online gratis para enlaces, textos o contactos. Ajusta colores, fondo e iconos fácilmente y descarga tu QR al instante.">
+    <meta name="keywords" content="generador qr, código qr online, crear qr gratis, qr personalizado, qr con logo, herramientas web">
+    <meta name="author" content="herramientasweb.pro">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://herramientasweb.pro/generador-qr.html">
+    <meta http-equiv="content-language" content="es">
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Generador de QR | Herramientas Web Gratis Online">
+    <meta property="og:description" content="Genera códigos QR personalizados online gratis para enlaces, textos o contactos. Ajusta colores, fondo e iconos fácilmente y descarga tu QR al instante.">
+    <meta property="og:url" content="https://herramientasweb.pro/generador-qr.html">
+    <meta property="og:image" content="https://herramientasweb.pro/Preview.webp">
+    <meta property="og:site_name" content="Herramientas Web">
+    <meta property="og:locale" content="es_ES">
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Generador de QR | Herramientas Web Gratis Online">
+    <meta name="twitter:description" content="Genera códigos QR personalizados online gratis para enlaces, textos o contactos. Ajusta colores, fondo e iconos fácilmente y descarga tu QR al instante.">
+    <meta name="twitter:image" content="https://herramientasweb.pro/Preview.webp">
+    <meta name="twitter:site" content="@herramientasweb">
+    <meta name="twitter:creator" content="@herramientasweb">
+    <!-- PRECONEXIONES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- DATOS ESTRUCTURADOS -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Generador de QR",
+      "url": "https://herramientasweb.pro/generador-qr.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "description": "Herramienta online para generar códigos QR personalizados de forma rápida, gratuita y sencilla.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Herramientas Web",
+        "url": "https://herramientasweb.pro/"
+      }
+    }
+    </script>
+    <!-- FAVICONS -->
+    <link rel="icon" href="Logo.webp" type="image/webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo.webp">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP + ICONOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- JS LIBRERÍA -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <!-- CSS PERSONALIZADO -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="estrellas"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+        <a class="navbar-brand fw-bold" href="index.html">herramientasweb.pro</a>
+            <button class="btn" id="shareBtn" title="Compartir"><i class="bi bi-share-fill"></i></button>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container-fluid pt-5">
+    <div class="row">
+
+        <!-- CONTENIDO IZQUIERDA -->
+        <div class="col-lg-3 d-none d-lg-block align-items-center"></div>
+
+        <!-- CONTENIDO CENTRO -->
+        <div class="col-lg-6">
+        
+            <!-- CALIFICACIÓN -->
+            <div class="rating-box " data-tool="generador-qr">
+                <div class="rating-stars">
+                    <span class="star" data-value="1">☆</span>
+                    <span class="star" data-value="2">☆</span>
+                    <span class="star" data-value="3">☆</span>
+                    <span class="star" data-value="4">☆</span>
+                    <span class="star" data-value="5">☆</span>
+                </div>
+                <p class="rating-text">Sin calificación</p>
+            </div>
+        
+            <!-- HERRAMIENTA -->
+            <div class="tool-card text-center">
+                <h1 class="mb-3">Generador de QR</h1>
+                <p>Crea códigos QR personalizados para enlaces, textos o contactos. Ajusta colores, fondo e ícono.</p>
+                <br>
+
+                <!-- Entrada de texto/URL -->
+                <input type="text" id="textoQR" class="form-control mb-3" placeholder="Introduce URL o texto">
+
+                <!-- Colores -->
+                <div class="row mb-3">
+                    <div class="col">
+                        <label>Color QR</label>
+                        <input type="color" id="colorQR" class="form-control" value="#5933cf">
+                    </div>
+                    <div class="col">
+                        <label>Color de Fondo</label>
+                        <input type="color" id="colorFondo" class="form-control" value="#41e027">
+                    </div>
+                </div>
+
+                <!-- Icono central -->
+                <label>Icono central (opcional)</label>
+                <input type="file" id="iconoQR" class="form-control mb-3" accept="image/*">
+
+                <button class="btn btn-primary mb-3" onclick="generarQR()">Generar QR</button>
+
+                <h5 class="mt-3">Vista previa:</h5>
+                <div id="previewQR" class="my-3"></div>
+
+                <button class="btn btn-primary mb-3" onclick="descargarQR()">Descargar QR</button>
+            </div>
+        
+            <!-- INSTRUCCIONES -->
+            <div class="instrucciones mt-4">
+                <h2>¿Cómo usar el Generador de QR?</h2>
+                <p>El generador de códigos QR online es una herramienta práctica que permite convertir enlaces, textos o información
+                    en códigos QR escaneables desde cualquier dispositivo móvil. Esta herramienta es ideal para compartir
+                    información de forma rápida, moderna y sin necesidad de escribir largas direcciones. Además, permite
+                    personalizar el diseño del código QR, ajustando colores, fondo e incluso agregando un ícono central para hacerlo
+                    más atractivo y acorde a tu marca o estilo.</p>
+            
+                <h3>Pasos para utilizar la herramienta</h3>
+                <ol>
+                    <li>Introduce la <strong>URL o texto</strong> que deseas convertir en código QR.</li>
+                    <li>Selecciona el <strong>color del código QR</strong> para adaptarlo a tu diseño.</li>
+                    <li>Elige el <strong>color de fondo</strong> que mejor contraste con el código.</li>
+                    <li>Opcionalmente, carga un <strong>ícono central</strong> para personalizar el QR (por ejemplo, logo de tu
+                        negocio).</li>
+                    <li>Haz clic en el botón <strong>“Generar QR”</strong>.</li>
+                    <li>Visualiza el resultado en la vista previa.</li>
+                    <li>Descarga el código QR en tu dispositivo para usarlo en tus proyectos.</li>
+                </ol>
+            
+                <h3>Video Tutorial</h3>
+                <div class="ratio ratio-16x9 mb-3">
+                    <video controls>
+                        <source src="GeneradorQR.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+                </div>
+                <p>En este video aprenderás a generar códigos QR paso a paso, desde la introducción de datos hasta la
+                    personalización del diseño. Se muestran ejemplos reales de uso, como la creación de códigos para redes sociales,
+                    enlaces web y tarjetas digitales. También se explican recomendaciones importantes para asegurar que el código
+                    sea legible y funcional en cualquier dispositivo.</p>
+            
+                <h3>Consejos para un uso efectivo</h3>
+                <ul>
+                    <li>Utiliza colores con buen contraste para asegurar que el código sea escaneable.</li>
+                    <li>No abuses de los diseños complejos o íconos grandes que puedan dificultar la lectura del QR.</li>
+                    <li>Prueba el código QR antes de compartirlo para verificar que funcione correctamente.</li>
+                    <li>Utiliza URLs cortas para generar códigos más limpios y fáciles de escanear.</li>
+                    <li>Descarga el QR en alta calidad si lo vas a imprimir en materiales físicos.</li>
+                </ul>
+            
+                <h3>Aplicaciones prácticas y reales</h3>
+                <ul>
+                    <li><strong>Negocios:</strong> compartir menús digitales, promociones o información de contacto.</li>
+                    <li><strong>Educación:</strong acceso rápido a recursos, tareas o enlaces de estudio.</li>
+                    <li><strong>Marketing:</strong campañas publicitarias con acceso directo a páginas web.</li>
+                    <li><strong>Eventos:</strong boletos digitales, registro o información del evento.</li>
+                    <li><strong>Uso personal:</strong compartir redes sociales, WiFi o datos de contacto.</li>
+                </ul>
+            
+                <h3>Ejemplos visuales</h3>
+                <table class="table table-bordered text-center table-responsive">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#000; color:#fff;">QR 1</th>
+                            <th style="background-color:#2c3e50; color:#fff;">QR 2</th>
+                            <th style="background-color:#16a085; color:#fff;">QR 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tipo</strong><br>URL</td>
+                            <td><strong>Tipo</strong><br>Texto</td>
+                            <td><strong>Tipo</strong><br>Contacto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contenido</strong><br>https://tusitio.com</td>
+                            <td><strong>Contenido</strong><br>Mensaje personalizado</td>
+                            <td><strong>Contenido</strong><br>vCard</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Uso</strong><br>Web</td>
+                            <td><strong>Uso</strong><br>Información</td>
+                            <td><strong>Uso</strong><br>Networking</td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <h3>Preguntas frecuentes</h3>
+                <div class="accordion" id="faqAccordionQR">
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1">
+                                ¿Qué es un código QR?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordionQR">
+                            <div class="accordion-body">
+                                Es un código bidimensional que permite almacenar información y ser escaneado rápidamente con un
+                                dispositivo móvil.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2">
+                                ¿Puedo personalizar el diseño del QR?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionQR">
+                            <div class="accordion-body">
+                                Sí, puedes cambiar colores, fondo y agregar un ícono central para adaptarlo a tu estilo o marca.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3">
+                                ¿Los códigos QR caducan?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionQR">
+                            <div class="accordion-body">
+                                No, los códigos QR no caducan, pero el contenido al que apuntan (como una URL) sí puede cambiar o
+                                dejar de existir.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse4">
+                                ¿Qué formato debo usar para descargarlo?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordionQR">
+                            <div class="accordion-body">
+                                Se recomienda PNG para uso digital y SVG si necesitas alta calidad para impresión.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse5">
+                                ¿Se pueden usar en impresión?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordionQR">
+                            <div class="accordion-body">
+                                Sí, los códigos QR son ideales para impresión en carteles, tarjetas, flyers y empaques.
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="col-lg-3 d-flex flex-column align-items-center">
+
+            <!-- HERRAMIENTAS SUGERIDAS -->
+            <div class="sugerencias mt-4">
+                <h5>Podría servirte:</h5>
+                <ul id="herramientasRandom" class="list-group"></ul>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-4">
+    <p>© 2026 <a class="footer-link" href="index.html" target="_blank">herramientasweb.pro</a>. Herramientas y Sitio Desarrolladas por <a class="footer-link" href="https://ictecdigital.com/" target="_blank">IC Pages</a>.</p>
+    <p>
+        <a class="footer-link" href="aviso-privacidad.html">Aviso de Privacidad</a> | 
+        <a class="footer-link" href="politica-cookies.html">Política de Cookies</a> | 
+        <a class="footer-link" href="terminos-servicio.html">Términos de Servicio</a>
+    </p>
+</footer>
+
+<!-- FUNCIONAMIENTO -->
+<script>
+    let canvas, ctx;
+    function generarQR() {
+        const text = document.getElementById("textoQR").value.trim();
+        const color = document.getElementById("colorQR").value;
+        const bg = document.getElementById("colorFondo").value;
+        const preview = document.getElementById("previewQR");
+        if (!text) {
+            alert("Introduce un texto o URL para generar el QR");
+            return;
+        }
+        preview.innerHTML = "";
+        canvas = document.createElement("canvas");
+        canvas.width = 300;
+        canvas.height = 300;
+        ctx = canvas.getContext("2d");
+        preview.appendChild(canvas);
+        QRCode.toCanvas(canvas, text, {
+            width: 300,
+            margin: 2,
+            color: { dark: color, light: bg },
+            errorCorrectionLevel: 'L'
+        }, function (error) {
+            if (error) console.error(error);
+            agregarIcono();
+        });
+    }
+    function agregarIcono() {
+        const file = document.getElementById("iconoQR").files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const img = new Image();
+            img.onload = function () {
+                const size = 60;
+                ctx.drawImage(img,
+                    (canvas.width / 2) - (size / 2),
+                    (canvas.height / 2) - (size / 2),
+                    size,
+                    size
+                );
+            }
+            img.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+    function descargarQR() {
+        if (!canvas) {
+            alert("Primero genera el QR para poder descargarlo");
+            return;
+        }
+        const link = document.createElement('a');
+        link.download = "qr-herramientasweb.png";
+        link.href = canvas.toDataURL();
+        link.click();
+    }
+</script>
+
+<!-- BANNER DE COOKIES -->
+<div id="cookie-banner">
+    <p>Este sitio usa cookies para mejorar tu experiencia.
+        <a href="aviso-privacidad.html" target="_blank">Más información</a>.
+    </p>
+    <button id="cookie-accept">Aceptar</button>
+</div>
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS -->
+<script type="module" src="rating.js"></script>
+
+</body>
+</html>
