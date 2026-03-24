@@ -173,6 +173,17 @@ body {
     color: #41e027;
 }
 
+.table {
+    width: 100%;          /* Ocupa todo el ancho disponible */
+    table-layout: fixed;  /* Distribuye el ancho de columnas de forma uniforme */
+    border-radius: 15px;  /* Bordes redondeados */
+    overflow: hidden;     /* Evita que el contenido sobresalga de los bordes */
+}
+
+.table th, .table td {
+    word-wrap: break-word; /* Evita que el texto largo salga de la celda */
+}
+
 /* CALIFICACIONES */
 .rating-stars{
   cursor: pointer;
