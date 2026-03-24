@@ -124,7 +124,7 @@ const herramientas = [
     { nombre: "Generador de Box-Shadow", link: "box-shadow.html" },
     //{ nombre: "Generador de Código de Barras", link: "codigo-barras.html" },
     //{ nombre: "Generador de Password", link: "generador-password.html" },
-    { nombre: "Generador de Gradientes", link: "generador-gradientes.html" },
+    { nombre: "Generador de Gradientes", link: "gradientes.html" },
     //{ nombre: "Generador de Meta Tag SEO", link: "meta-tag-seo.html" },
     { nombre: "Generador QR", link: "generador-qr.html" },
     { nombre: "Generador de Sopa de Letras", link: "sopa-letras.html" },
