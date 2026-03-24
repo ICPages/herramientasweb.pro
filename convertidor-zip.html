@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC1PSC0TC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JC1PSC0TC2');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4689120070476643" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>Convertidor a ZIP Online | Comprimir Archivos Gratis</title>
+    <meta name="description" content="Comprime archivos en formato ZIP online gratis. Crea archivos ZIP fácilmente desde múltiples documentos, imágenes o carpetas.">
+    <meta name="keywords" content="convertidor a zip, comprimir archivos, crear zip online, compresor de archivos gratis, zip online, herramientas web">
+    <meta name="author" content="herramientasweb.pro">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://herramientasweb.pro/convertidor-zip.html">
+    <meta http-equiv="content-language" content="es">
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Convertidor a ZIP Online | Comprimir Archivos Gratis">
+    <meta property="og:description" content="Comprime archivos en formato ZIP online gratis. Crea archivos ZIP fácilmente desde múltiples documentos, imágenes o carpetas.">
+    <meta property="og:url" content="https://herramientasweb.pro/convertidor-zip.html">
+    <meta property="og:image" content="https://herramientasweb.pro/Preview.webp">
+    <meta property="og:site_name" content="Herramientas Web">
+    <meta property="og:locale" content="es_ES">
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Convertidor a ZIP Online | Comprimir Archivos Gratis">
+    <meta name="twitter:description" content="Comprime archivos en formato ZIP online gratis. Crea archivos ZIP fácilmente desde múltiples documentos, imágenes o carpetas.">
+    <meta name="twitter:image" content="https://herramientasweb.pro/Preview.webp">
+    <meta name="twitter:site" content="@herramientasweb">
+    <meta name="twitter:creator" content="@herramientasweb">
+    <!-- PRECONEXIONES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- DATOS ESTRUCTURADOS -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Convertidor a ZIP",
+      "url": "https://herramientasweb.pro/convertidor-zip.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "description": "Herramienta online para comprimir archivos en formato ZIP de forma rápida, segura y gratuita.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Herramientas Web",
+        "url": "https://herramientasweb.pro/"
+      }
+    }
+    </script>
+    <!-- FAVICONS -->
+    <link rel="icon" href="Logo.webp" type="image/webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo.webp">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP + ICONOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- JS LIBRERÍA -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- CSS PERSONALIZADO -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="estrellas"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+        <a class="navbar-brand fw-bold" href="index.html">herramientasweb.pro</a>
+            <button class="btn" id="shareBtn" title="Compartir"><i class="bi bi-share-fill"></i></button>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container-fluid pt-5">
+    <div class="row">
+
+        <!-- CONTENIDO IZQUIERDA -->
+        <div class="col-lg-3 d-none d-lg-block align-items-center"></div>
+
+        <!-- CONTENIDO CENTRO -->
+        <div class="col-lg-6">
+        
+            <!-- CALIFICACIÓN -->
+            <div class="rating-box " data-tool="convertidor-zip">
+                <div class="rating-stars">
+                    <span class="star" data-value="1">☆</span>
+                    <span class="star" data-value="2">☆</span>
+                    <span class="star" data-value="3">☆</span>
+                    <span class="star" data-value="4">☆</span>
+                    <span class="star" data-value="5">☆</span>
+                </div>
+                <p class="rating-text">Sin calificación</p>
+            </div>
+        
+            <!-- HERRAMIENTA -->
+            <div class="tool-card text-center">
+                <h1 class="mb-3">Convertidor a ZIP</h1>
+                <p>Selecciona varios archivos y crea un solo archivo ZIP de manera rápida y segura.</p>
+                <input type="file" id="inputArchivos" class="form-control mb-4" multiple>
+                <button class="btn btn-primary" onclick="crearZip()">Descargar Archivo ZIP</button>
+                <div id="descargaZip"></div>
+            </div>
+        
+            <!-- INSTRUCCIONES -->
+            <div class="instrucciones mt-4">
+                <h2>¿Cómo usar el Convertidor a ZIP?</h2>
+                <p>El Convertidor a ZIP online es una herramienta práctica que permite comprimir uno o varios archivos en un solo
+                    archivo ZIP de manera rápida y eficiente. Con esta herramienta podrás organizar documentos, imágenes, archivos
+                    de texto, presentaciones y cualquier tipo de archivo compatible en un solo contenedor, reduciendo espacio y
+                    facilitando su almacenamiento o envío. Todo esto se realiza completamente en línea, sin necesidad de instalar
+                    software adicional en tu computadora o dispositivo móvil.</p>
+            
+                <h3>Pasos para utilizar la herramienta</h3>
+                <ol>
+                    <li>Haz clic en el botón para seleccionar los archivos desde tu dispositivo. Puedes elegir uno o varios archivos
+                        simultáneamente.</li>
+                    <li>Verifica que todos los archivos seleccionados sean compatibles con la herramienta.</li>
+                    <li>Presiona el botón <strong>“Descargar Archivo ZIP”</strong> para iniciar el proceso de compresión.</li>
+                    <li>La herramienta comprimirá automáticamente todos los archivos en un único archivo ZIP.</li>
+                    <li>Cuando finalice el proceso, se generará un enlace de descarga. Haz clic en él para guardar el archivo ZIP en
+                        tu dispositivo.</li>
+                    <li>Opcionalmente, puedes renombrar el archivo ZIP antes de guardarlo para mantener un orden en tus documentos.
+                    </li>
+                </ol>
+            
+                <h3>Video Tutorial</h3>
+                <div class="ratio ratio-16x9 mb-3">
+                    <video controls>
+                        <source src="ConvertidorZIP.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+                </div>
+                <p>En este video se explica paso a paso cómo usar el Convertidor a ZIP, desde la selección de archivos hasta la
+                    descarga del archivo comprimido. Se destacan consejos para organizar correctamente los archivos antes de
+                    comprimirlos y cómo verificar que todos los documentos se incluyan en el ZIP final. Incluso los principiantes
+                    podrán seguirlo y obtener resultados precisos.</p>
+            
+                <h3>Consejos para un uso efectivo</h3>
+                <ul>
+                    <li>Verifica que los archivos que deseas comprimir estén completos y sin errores antes de iniciar la compresión.
+                    </li>
+                    <li>Utiliza nombres de archivos claros y organizados para que sea fácil identificar los contenidos dentro del
+                        archivo ZIP.</li>
+                    <li>Evita comprimir archivos extremadamente grandes en una sola operación para prevenir errores de descarga.
+                    </li>
+                    <li>Si compartes el ZIP por correo electrónico, verifica que el tamaño final no supere el límite permitido por
+                        el servicio de correo.</li>
+                    <li>Guarda una copia de seguridad de los archivos originales antes de comprimirlos para prevenir pérdida de
+                        información.</li>
+                </ul>
+            
+                <h3>Aplicaciones prácticas y reales</h3>
+                <p>El Convertidor a ZIP tiene múltiples usos en la vida diaria y profesional:</p>
+                <ul>
+                    <li><strong>Estudiantes:</strong> agrupa tareas, proyectos y presentaciones en un solo archivo para enviarlas
+                        fácilmente al profesor.</li>
+                    <li><strong>Profesionales:</strong> organiza reportes, documentos y recursos de proyectos para enviarlos a
+                        clientes o compañeros de trabajo de manera ordenada.</li>
+                    <li><strong>Archivos personales:</strong> almacena fotos, videos y documentos en un solo contenedor, reduciendo
+                        espacio en disco.</li>
+                    <li><strong>Transferencia en línea:</strong> facilita la subida a servicios de almacenamiento o envío por correo
+                        electrónico, evitando enviar múltiples archivos individuales.</li>
+                    <li><strong>Seguridad y organización:</strong> comprimir archivos permite proteger la información y mantener una
+                        estructura más clara de documentos importantes.</li>
+                </ul>
+            
+                <h3>Ejemplos visuales de archivos comprimidos</h3>
+                <table class="table table-bordered text-center table-responsive">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#5933cf; color:#fff;">Archivo 1</th>
+                            <th style="background-color:#41e027; color:#000;">Archivo 2</th>
+                            <th style="background-color:#f1c40f; color:#000;">Archivo 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tipo</strong><br>DOCX</td>
+                            <td><strong>Tipo</strong><br>JPG</td>
+                            <td><strong>Tipo</strong><br>PNG</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tamaño</strong><br>1.2 MB</td>
+                            <td><strong>Tamaño</strong><br>2.5 MB</td>
+                            <td><strong>Tamaño</strong><br>800 KB</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nombre</strong><br>Informe.docx</td>
+                            <td><strong>Nombre</strong><br>Imagen1.jpg</td>
+                            <td><strong>Nombre</strong><br>Logo.png</td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <h3>Preguntas frecuentes</h3>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                ¿Qué es un archivo ZIP?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Un archivo ZIP es un contenedor que agrupa uno o varios archivos y los comprime para reducir su
+                                tamaño y facilitar su almacenamiento o envío.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                ¿Puedo comprimir cualquier tipo de archivo?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, la herramienta soporta archivos de texto, imágenes, documentos de Office, PDFs y muchos otros
+                                formatos. Algunos tipos muy especializados pueden no ser compatibles.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                ¿Puedo comprimir varios archivos a la vez?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, puedes seleccionar varios archivos y comprimirlos en un solo archivo ZIP de manera simultánea,
+                                ahorrando tiempo y esfuerzo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                ¿Es seguro enviar archivos ZIP por correo?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, siempre y cuando los archivos no contengan información sensible sin protección adicional. Para
+                                mayor seguridad, puedes proteger el ZIP con contraseña usando herramientas externas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                ¿Puedo descomprimir un archivo ZIP en cualquier computadora?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, la mayoría de los sistemas operativos modernos incluyen herramientas para descomprimir archivos
+                                ZIP de forma nativa, sin necesidad de software adicional.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="col-lg-3 d-flex flex-column align-items-center">
+
+            <!-- HERRAMIENTAS SUGERIDAS -->
+            <div class="sugerencias mb-4">
+                <h5>Podría servirte:</h5>
+                <ul id="herramientasRandom" class="list-group"></ul>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-4">
+    <p>© 2026 <a class="footer-link" href="index.html" target="_blank">herramientasweb.pro</a>. Herramientas y Sitio Desarrolladas por <a class="footer-link" href="https://ictecdigital.com/" target="_blank">IC Pages</a>.</p>
+    <p>
+        <a class="footer-link" href="aviso-privacidad.html">Aviso de Privacidad</a> | 
+        <a class="footer-link" href="politica-cookies.html">Política de Cookies</a> | 
+        <a class="footer-link" href="terminos-servicio.html">Términos de Servicio</a>
+    </p>
+</footer>
+
+<!-- FUNCIONAMIENTO -->
+<script>
+async function crearZip() {
+    const archivos = document.getElementById("inputArchivos").files;
+    if (!archivos.length) {
+        alert("Selecciona al menos un archivo");
+        return;
+    }
+    const zip = new JSZip();
+    Array.from(archivos).forEach(archivo => {
+        zip.file(archivo.name, archivo);
+    });
+    const contenido = await zip.generateAsync({ type: "blob" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(contenido);
+    link.download = "archivo-herramientasweb.zip";
+    link.click();
+}
+</script>
+
+<!-- BANNER DE COOKIES -->
+<div id="cookie-banner">
+    <p>Este sitio usa cookies para mejorar tu experiencia.
+        <a href="aviso-privacidad.html" target="_blank">Más información</a>.
+    </p>
+    <button id="cookie-accept">Aceptar</button>
+</div>
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS -->
+<script type="module" src="rating.js"></script>
+
+</body>
+</html>
