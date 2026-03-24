@@ -98,6 +98,16 @@ body {
     color: #41e027 !important;
 }
 
+.navbar button {
+    background-color: #5933cf;
+    color: #fff;
+}
+
+.navbar button:hover {
+    background-color: #41e027;
+    color: black;
+}
+
 /* SIDEBAR */
 .sidebar {
     background: #0d0d0d;
@@ -154,7 +164,7 @@ body {
     border: 1px solid #222;
 }
 
-.instrucciones h2, h5 {
+.instrucciones h2, h5, h3 {
     color: #5933cf;
     font-weight: 700;
 }
@@ -206,7 +216,67 @@ body {
     color: black;
 }
 
+/* PREGUNTAS Y RESPUESTAS */
+.accordion-button {
+    background-color: #111; /* Fondo oscuro para la pregunta */
+    color: var(--secondary); /* Texto verde brillante */
+    font-weight: 700;
+    border: none; /* Sin contorno */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 0.8rem 1rem;
+    transition: 0.3s;
+    box-shadow: none;
+}
+
+.accordion-button:hover {
+    background-color: #41e027;; /* Hover ligeramente más claro */
+    color: #111; /* Cambio de texto a morado */
+}
+
+.accordion-button:focus {
+    box-shadow: none; /* Quitar borde azul al enfocar */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--secondary); /* Verde al expandirse */
+    color: #000; /* Texto negro legible */
+}
+
+.accordion-body {
+    background-color: #111; /* Fondo de la respuesta */
+    color: var(--secondary); /* Texto verde */
+    border-radius: 0 0 15px 15px; /* Bordes redondeados solo abajo */
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    transition: 0.3s;
+    box-shadow: none;
+}
+
+.accordion-item {
+    background-color: #111;
+    margin-bottom: 1rem;
+    border: none; /* Sin contorno */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    font-size: 1.2rem; /* Tamaño de flecha */
+    color: var(--secondary); /* Flecha verde */
+}
+
+.accordion-button:not(.collapsed)::after {
+    color: #111; /* Flecha negra cuando está expandido */
+}
+
 /* FOOTER */
+#footer {
+    text-align: center;
+   
+    padding-bottom: 1.5rem;
+}
 .footer-link {
     color: #fff;
     text-decoration: none;
@@ -260,3 +330,70 @@ body {
 #opcionesList { max-height: 200px; overflow-y: auto; margin-bottom:1rem; }
 #podium { margin-top:20px; }
 .podium-item { display:flex; justify-content:space-between; padding:5px 10px; border-bottom:1px solid #ccc; }
+
+/* Google AdSense */
+.ad-placeholder {
+    background: linear-gradient(225deg, #5933cf, #41e027);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 12px;
+}
+.ad-300x250 { width: 300px; height: 250px; margin: 0 auto; }
+.ad-300x600 { width: 300px; height: 600px; }
+.ad-728x90  { width: 100%; max-width: 728px; height: 90px; margin: 0 auto; }
+
+/* HERRAMIENTAS SUGERIDAS */
+.sugerencias {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.sugerencias h5 {
+    color: #5933cf;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.sugerencias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sugerencias li {
+    margin: 0;
+}
+
+.sugerencias li a {
+    display: block;
+    background: #111;
+    color: #fff;
+    border: 1px solid #222;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+/* Hover igual a sidebar pero con tu color verde */
+.sugerencias li a:hover {
+    background: #222;
+    color: #41e027;
+}
+
+/* Opcional: bordes exteriores suaves tipo bloque */
+.sugerencias li:first-child a {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.sugerencias li:last-child a {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
